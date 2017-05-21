@@ -1,0 +1,36 @@
+<body>
+<input type="text" id="width" value="Enter width here (e.g. 5)"></input><button onclick="createCanvas()">Start</button><br>
+<script>
+function createCanvas(){
+    //Here we create the canvas (with our sizes)
+    var size = document.getElementById("width").value;
+    var width = size*300;
+    var height = 150;
+    var canvas = document.createElement("canvas");
+    canvas.style = "border: 1px solid"
+    canvas.width = width;
+    canvas.height = height;
+    canvas.id = "draw";
+    document.body.appendChild(canvas);
+    //We made the canvas, now to draw the heightmap
+    {
+        var c = document.getElementById('draw');
+        var ctx = c.getContext("2d");
+        var x = 0;
+        var y = c.height/2;
+        var oldy = y+(Math.floor((Math.random() * 3) + 1)-2);
+        //We have defined all the necicary variables before the draw-sequence. The below code loops drawing pixels down the y axis every x pixel
+        while(x < c.width){
+            var y = oldy;
+            while(y < c.height){
+                ctx.fillStyle = "rgba(0,255,0,1)";
+                ctx.fillRect( x, y, 1, 1 );
+                var y = y+1;
+            }
+            var oldy = oldy+(Math.floor((Math.random() * 3) + 1)-2);
+            var x = x+1;
+        }
+    }
+}
+</script>
+</body>
