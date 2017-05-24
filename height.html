@@ -29,11 +29,11 @@ function createCanvas(){
                 var y = y+1;
             }
             if(schweiss == 0){
-                var schweiss = (Math.floor((Math.random() * 3) + 1)-2);
+                var schweiss = Math.floor((Math.random() * 1) - 1);
             }else if(schweiss == -1){
-                var schweiss = (Math.floor((Math.random() * 2) + 1)-2);
+                var schweiss = Math.floor((Math.random() * -1) + 0);
             }else if(schweiss == 1){
-                var schweiss = (Math.floor((Math.random() * 3) + 2)-2);
+                var schweiss = Math.floor((Math.random() * 1) + 0);
             }
             var oldy = oldy+schweiss;
             var x = x+1;
