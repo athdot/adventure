@@ -2,7 +2,7 @@
 <input type="text" id="width" value="Enter width here (e.g. 5)"><button onclick="createCanvas()">Start</button><br>
 <script>
 function createCanvas(){
-//Canvas created here
+    //Here we create the canvas (with our sizes)
     var size = document.getElementById("width").value;
     var width = size*300;
     var height = 150;
@@ -27,7 +27,7 @@ function createCanvas(){
                 ctx.fillRect( x, y, 1, 1 );
                 var y = y+1;
             }
-            var oldy = y+(Math.floor((Math.random() * 3) + 1)-2);
+            var oldy = oldy+(Math.floor((Math.random() * 3) + 1)-2);
             var x = x+1;
         }
     }
