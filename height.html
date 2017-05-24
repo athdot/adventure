@@ -24,8 +24,16 @@ function createCanvas(){
         while(x < c.width){
             var y = oldy;
             while(y < c.height){
-                ctx.fillStyle = "rgba(0,255,0,1)";
+                if(Math.floor((Math.random() * 7) + 1) == 1){
+                ctx.fillStyle = "rgba(100,100,100,1)";
                 ctx.fillRect( x, y, 1, 1 );
+                }else if(y == oldy){
+                ctx.fillStyle = "rgba(0,255,0,1)";
+                ctx.fillRect( x, y, 1, 1 );    
+                         }else{
+                ctx.fillStyle = "rgba(244,164,96,1)";
+                ctx.fillRect( x, y, 1, 1 );
+                }
                 var y = y+1;
             }
             if(schweiss == 0){
