@@ -19,11 +19,6 @@ function createCanvas(){
         var ctx = c.getContext("2d");
         var x = 0;
         var y = c.height/2;
-        if(randint == 0){
-        var randint = (Math.floor((Math.random() * 7) + 1)-2);
-        }else{
-        var randint = (Math.floor((Math.random() * 3) + 1)-2);    
-        }
         var oldy = y+randint;
         //We have defined all the necicary variables before the draw-sequence. The below code loops drawing pixels down the y axis every x pixel
         while(x < c.width){
@@ -33,7 +28,13 @@ function createCanvas(){
                 ctx.fillRect( x, y, 1, 1 );
                 var y = y+1;
             }
-            var oldy = oldy+(Math.floor((Math.random() * 3) + 1)-2);
+            if(oldy == 0){
+                var oldy = oldy+(Math.floor((Math.random() * 3) + 1)-2);
+            }else if(oldy == -1){
+                var oldy = oldy+(Math.floor((Math.random() * 2) + 1)-2);
+            }else if(oldy == 1){
+                var oldy = oldy+(Math.floor((Math.random() * 3) + 2)-2);
+            }
             var x = x+1;
         }
     }
