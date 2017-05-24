@@ -45,15 +45,17 @@ document.body.appendChild(texturecanvas);
         var supdirt = Math.floor((Math.random() * 5) + 1);
         var dirt = document.getElementById("dirt"+supdirt);
         context.drawImage(dirt,texturex,texturey,pxsize,pxsize)
-      }else if(data === "100,100,100,255"){
+      }
+	if(data === "100,100,100,255"){
       	var texturex = x*pxsize;
         var texturey = y*pxsize;
       	var canvas = document.getElementById("texture");
         var context = canvas.getContext("2d");
-        var supdirt = Math.floor((Math.random() * 5) + 1);
-        var dirt = document.getElementById("stone"+supdirt);
-        context.drawImage(dirt,texturex,texturey,pxsize,pxsize) 
-      }else{
+        var supstone = Math.floor((Math.random() * 5) + 1);
+        var stone = document.getElementById("stone"+supstone);
+        context.drawImage(stone,texturex,texturey,pxsize,pxsize) 
+      }
+	if(data === "0,0,0,0"){
 	       	//Code for filling in square on bigger image =)
       	var texturex = x*pxsize;
         var texturey = y*pxsize;
