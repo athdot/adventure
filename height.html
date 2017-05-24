@@ -26,7 +26,7 @@ function createCanvas(){
         }else if(randint == 1){
         var randint = (Math.floor((Math.random() * 3) + 2)-3);    
         }
-        var oldy = y+(Math.floor((Math.random() * 3) + 1)-2);
+        var oldy = y+randint;
         //We have defined all the necicary variables before the draw-sequence. The below code loops drawing pixels down the y axis every x pixel
         while(x < c.width){
             var y = oldy;
