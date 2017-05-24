@@ -35,7 +35,7 @@
     			}
 			}
 			var dataurl = dirty.toDataURL();
-            document.getElementById("dirt"+randirt).src = dataurl;
+            document.getElementById("stone"+randirt).src = dataurl;
 var randirt = randirt+1;
         }
         //Yay! made dirt texture!
