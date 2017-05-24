@@ -28,13 +28,7 @@ function createCanvas(){
                 ctx.fillRect( x, y, 1, 1 );
                 var y = y+1;
             }
-            if(randint == 0){
                 var randint = (Math.floor((Math.random() * 3) + 1)-2);
-            }else if(randint == -1){
-                var randint = (Math.floor((Math.random() * 1) + 0)-1);
-            }else if(randint == 1){
-                var randint = (Math.floor((Math.random() * 1) + 0));
-            }
             var oldy = y+randint;
             var x = x+1;
         }
