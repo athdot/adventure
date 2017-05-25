@@ -25,7 +25,6 @@ grassctx.fillStyle = "rgba(51,138,71,1)";
 grassctx.fillRect( xgrass, ygrass, 1, 1 );
 }
 }else{
-
 var randint = Math.floor((Math.random() * 3) + 1);
 if(randint == 1){
 grassctx.fillStyle = "rgba(97,65,78,1)";
