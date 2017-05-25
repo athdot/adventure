@@ -4,7 +4,7 @@
            	 //edit dirt image
              var dirtimg = document.createElement("img");
              dirtimg.style = "display:none;"
-             dirtimg.id = "grassleft"+randirt;
+             dirtimg.id = "grassright"+randirt;
              document.body.appendChild(dirtimg);
          var dirty = document.createElement("canvas");
 		 dirty.style = "display:none;"
@@ -54,7 +54,7 @@ var terrainchange = Math.floor((Math.random() * 3) - 3);
     			}
 			}
 			var dataurl = dirty.toDataURL();
-            document.getElementById("grassleft"+randirt).src = dataurl;
+            document.getElementById("grassright"+randirt).src = dataurl;
 var randirt = randirt+1;
         }
         //Yay! made dirt texture!
