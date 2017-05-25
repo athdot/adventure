@@ -48,7 +48,8 @@
            				var ydirt = ydirt+1;
         			}
               }
-        			var ydirt = 64-xdirt;
+				var terrainchange = Math.floor((Math.random() * 3) - 3);
+        			var ydirt = 64-xdirt+terrainchange;
     				var xdirt = xdirt+1;
     			}
 			}
