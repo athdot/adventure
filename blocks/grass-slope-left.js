@@ -4,8 +4,8 @@ grass.height = "64";
 grass.style = "display:none;";
 document.body.appendChild(grass);
 var grassctx = grass.getContext("2d");
-var ygrass = 0;
-var xgrass = 64;
+var ygrass = 64;
+var xgrass = 0;
 while(xgrass < grass.width){
 var distbottom = 64-ygrass;
 var grassheight = Math.floor((Math.random() * 11) + 5);
