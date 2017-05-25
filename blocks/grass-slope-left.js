@@ -44,8 +44,8 @@ var ygrasss = ygrasss + 1;
 var ygrasss = 64-xgrasss+randchange;
 var xgrasss = xgrasss + 1;
 }
-var dataurl = grass.toDataURL();
-var imag = document.createElement("img");
-imag.src = dataurl;
-imag.id = "grassleft"
+var dataurls = grasss.toDataURL();
+var imagea = document.createElement("img");
+imagea.src = dataurls;
+imagea.id = "grassleft"
 document.body.appendChild(imag);
