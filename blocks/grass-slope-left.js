@@ -4,8 +4,8 @@ grass.height = "64";
 grass.style = "display:none;";
 document.body.appendChild(grass);
 var grassctx = grass.getContext("2d");
-var ygrass = 64;
-var xgrass = 0;
+var ygrass = 0;
+var xgrass = 64;
 while(xgrass < grass.width){
 var distbottom = 64-ygrass;
 var grassheight = Math.floor((Math.random() * 11) + 5);
@@ -25,6 +25,7 @@ grassctx.fillStyle = "rgba(51,138,71,1)";
 grassctx.fillRect( xgrass, ygrass, 1, 1 );
 }
 }else{
+
 var randint = Math.floor((Math.random() * 3) + 1);
 if(randint == 1){
 grassctx.fillStyle = "rgba(97,65,78,1)";
@@ -46,5 +47,5 @@ var xgrass = xgrass + 1;
 var dataurl = grass.toDataURL();
 var imag = document.createElement("img");
 imag.src = dataurl;
-imag.id = "grassleft"
+imag.id = "grassright"
 document.body.appendChild(imag);
