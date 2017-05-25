@@ -69,7 +69,7 @@ document.body.appendChild(texturecanvas);
         var context = canvas.getContext("2d");
         var supdirt = Math.floor((Math.random() * 5) + 1);
         var dirt = document.getElementById("dirt"+supdirt);
-        context.drawImage(dirt,texturex,texturey,pxsize,pxsize)
+        context.drawImage(dirt,texturex,texturey-pxsize,pxsize,pxsize)
       	//Code for filling in square on bigger image =)
       	var texturex = x*pxsize;
         var texturey = y*pxsize;
@@ -77,7 +77,7 @@ document.body.appendChild(texturecanvas);
         var context = canvas.getContext("2d");
         var supdirt = Math.floor((Math.random() * 5) + 1);
         var dirt = document.getElementById("grassleft"+supdirt);
-        context.drawImage(dirt,texturex,texturey-1,pxsize,pxsize)		      
+        context.drawImage(dirt,texturex,texturey-pxsize,pxsize,pxsize)		      
 	      }else{
       	//Code for filling in square on bigger image =)
       	var texturex = x*pxsize;
