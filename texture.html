@@ -40,9 +40,9 @@ document.body.appendChild(texturecanvas);
     	data = readctx.getImageData(x,y, 1, 1).data;
      	var data = data.toString();
       if(data === "0,255,0,255"){
-	      datadownslope = readctx.getImageData((x+1),(y+1), 1, 1).data;
+	      datadownslope = readctx.getImageData((x-1),(y-1), 1, 1).data;
      	var datadownslope = datadownslope.toString();
-	      dataupslope = readctx.getImageData((x-1),(y+1), 1, 1).data;
+	      dataupslope = readctx.getImageData((x+1),(y-1), 1, 1).data;
      	var dataupslope = dataupslope.toString();
 	      if(datadownslope === "0,255,0,255"){
 		            	//Code for filling in square on bigger image =)
