@@ -41,7 +41,7 @@ grasssctx.fillRect( xgrasss, ygrasss, 1, 1 );
 }
 var ygrasss = ygrasss + 1;
 }
-var ygrasss = 64-xgrasss+randchange;
+var ygrasss = 64-xgrasss+randchanges;
 var xgrasss = xgrasss + 1;
 }
 var dataurls = grasss.toDataURL();
