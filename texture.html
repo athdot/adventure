@@ -45,6 +45,14 @@ document.body.appendChild(texturecanvas);
 	      dataupslope = readctx.getImageData((x+1),(y-1), 1, 1).data;
      	var dataupslope = dataupslope.toString();
 	      if(datadownslope === "0,255,0,255"){
+		            	//Code for filling in square on bigger image =)
+      	var texturex = x*pxsize;
+        var texturey = y*pxsize;
+      	var canvas = document.getElementById("texture");
+        var context = canvas.getContext("2d");
+        var supdirt = Math.floor((Math.random() * 5) + 1);
+        var dirt = document.getElementById("dirt"+supdirt);
+        context.drawImage(dirt,texturex,texturey,pxsize,pxsize)
       	//Code for filling in square on bigger image =)
       	var texturex = x*pxsize;
         var texturey = y*pxsize;
@@ -52,8 +60,16 @@ document.body.appendChild(texturecanvas);
         var context = canvas.getContext("2d");
         var supdirt = Math.floor((Math.random() * 5) + 1);
         var dirt = document.getElementById("grassright"+supdirt);
-        context.drawImage(dirt,texturex,texturey,pxsize,pxsize)		      
+        context.drawImage(dirt,texturex,texturey-1,pxsize,pxsize)		      
 	      }else if(dataupslope === "0,255,0,255"){
+		            	//Code for filling in square on bigger image =)
+      	var texturex = x*pxsize;
+        var texturey = y*pxsize;
+      	var canvas = document.getElementById("texture");
+        var context = canvas.getContext("2d");
+        var supdirt = Math.floor((Math.random() * 5) + 1);
+        var dirt = document.getElementById("dirt"+supdirt);
+        context.drawImage(dirt,texturex,texturey,pxsize,pxsize)
       	//Code for filling in square on bigger image =)
       	var texturex = x*pxsize;
         var texturey = y*pxsize;
@@ -61,7 +77,7 @@ document.body.appendChild(texturecanvas);
         var context = canvas.getContext("2d");
         var supdirt = Math.floor((Math.random() * 5) + 1);
         var dirt = document.getElementById("grassleft"+supdirt);
-        context.drawImage(dirt,texturex,texturey,pxsize,pxsize)		      
+        context.drawImage(dirt,texturex,texturey-1,pxsize,pxsize)		      
 	      }else{
       	//Code for filling in square on bigger image =)
       	var texturex = x*pxsize;
