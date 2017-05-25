@@ -4,7 +4,7 @@
            	 //edit dirt image
              var dirtimg = document.createElement("img");
              dirtimg.style = "display:none;"
-             dirtimg.id = "grassright"+randirt;
+             dirtimg.id = "grassleft"+randirt;
              document.body.appendChild(dirtimg);
          var dirty = document.createElement("canvas");
 		 dirty.style = "display:none;"
@@ -48,12 +48,13 @@
            				var ydirt = ydirt+1;
         			}
               }
-        			var ydirt = xdirt;
+var terrainchange = Math.floor((Math.random() * 3) - 3);
+        			var ydirt = xdirt+terrainchange;
     				var xdirt = xdirt+1;
     			}
 			}
 			var dataurl = dirty.toDataURL();
-            document.getElementById("grassright"+randirt).src = dataurl;
+            document.getElementById("grassleft"+randirt).src = dataurl;
 var randirt = randirt+1;
         }
         //Yay! made dirt texture!
