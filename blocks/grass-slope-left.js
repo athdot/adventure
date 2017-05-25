@@ -48,4 +48,4 @@ var dataurls = grasss.toDataURL();
 var imagea = document.createElement("img");
 imagea.src = dataurls;
 imagea.id = "grassleft"
-document.body.appendChild(imag);
+document.body.appendChild(imagea);
