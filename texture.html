@@ -5,8 +5,6 @@
 	<script src="blocks/dirt.js"></script>
 	<script src="blocks/stone.js"></script>
 	<script src="blocks/grass.js"></script>
-	<script src="blocks/grass-slope-left.js"></script>
-	<script src="blocks/grass-slope-right.js"></script>
 	<script>
     setTimeout(function(){
 //We have the image, now lets make the canvas display the image
@@ -45,21 +43,9 @@ document.body.appendChild(texturecanvas);
 	      slopedown = readctx.getImageData(x+1,y+1, 1, 1).data;
      	      var slopedown = data.toString();
 	      if(slope === "0,255,0,255"){
-        var texturex = x*pxsize;
-        var texturey = y*pxsize;
-      	var canvas = document.getElementById("texture");
-        var context = canvas.getContext("2d");
-        var supdirt = Math.floor((Math.random() * 5) + 1);
-        var dirt = document.getElementById("grassleft");
-        context.drawImage(dirt,texturex,texturey,pxsize,pxsize)      
+console.log("up");   
 	      }else if(slopedown === "0,255,0,255"){
-	var texturex = x*pxsize;
-        var texturey = y*pxsize;
-      	var canvas = document.getElementById("texture");
-        var context = canvas.getContext("2d");
-        var supdirt = Math.floor((Math.random() * 5) + 1);
-        var dirt = document.getElementById("grassright");
-        context.drawImage(dirt,texturex,texturey,pxsize,pxsize)   	       
+console.log("down");  	       
 		       }else{
       	//Code for filling in square on bigger image =)
       	var texturex = x*pxsize;
