@@ -48,5 +48,4 @@ var dataurl = grass.toDataURL();
 var imag = document.createElement("img");
 imag.src = dataurl;
 imag.id = "grassleft"
-imag.style = "display:none;"
 document.body.appendChild(imag);
