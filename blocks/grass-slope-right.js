@@ -3,8 +3,8 @@
     while(randirt < 6){
            	 //edit dirt image
              var dirtimg = document.createElement("img");
-             dirtimg.id = "grassright"+randirt;
              dirtimg.style = "display:none;"
+             dirtimg.id = "grassright"+randirt;
              document.body.appendChild(dirtimg);
          var dirty = document.createElement("canvas");
 		 dirty.style = "display:none;"
@@ -16,9 +16,10 @@
     		 var xdirt = 0;
     		 var ydirt = 0;
     		 while(xdirt < dirty.width){
+                 var runn = 0;
          var grassheight = Math.floor((Math.random() * 16) + 5);
     			 while(ydirt < dirty.height){
-           if(grassheight > ydirt){
+           if(grassheight > runn){
         			 var randint = Math.floor((Math.random() * 3) + 1);
            			 if(randint == 1){
            			      dirtyctx.fillStyle = "rgba(43,171,73,1)";
@@ -30,7 +31,8 @@
                 			dirtyctx.fillStyle = "rgba(51,138,71,1)";
                 			dirtyctx.fillRect( xdirt, ydirt, 1, 1 );
             			}
-           				var ydirt = ydirt+1;           
+           				var ydirt = ydirt+1;    
+                                        var runn = runn+1;       
            }else{
         			 var randint = Math.floor((Math.random() * 3) + 1);
            			 if(randint == 1){
